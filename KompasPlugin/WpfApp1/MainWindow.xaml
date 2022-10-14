@@ -1,0 +1,47 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+
+        Title="Screw constructor" Height="500" Width="620">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="387*"/>
+            <ColumnDefinition Width="193*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="36*"/>
+        </Grid.RowDefinitions>
+        <Label Content="L – Общая длина винта (22-25 мм):" Margin="5,5,5,5" Grid.Row="0" Grid.RowSpan="1" Grid.ColumnSpan="1"/>
+        <TextBox TextWrapping="Wrap" Text="TextBox" Margin="10 30 0 15" Width="125" HorizontalAlignment="Left" Grid.Row="0" Grid.RowSpan="1"/>
+        <Label Content="M – Длина шлица (9 – 14 мм), должна быть меньше Dk + 2 мм:" Margin="5,5,5,5" Grid.Row="1" Grid.RowSpan="1" Grid.ColumnSpan="1"/>
+        <TextBox TextWrapping="Wrap" Text="TextBox" Margin="10 30 0 15" Width="125" HorizontalAlignment="Left" Grid.Row="1" Grid.RowSpan="1"/>
+        <Label Content="R – Радиус скругления (1 – 2 мм):" Margin="5,5,5,5" Grid.Row="2" Grid.RowSpan="1" Grid.ColumnSpan="1"/>
+        <TextBox TextWrapping="Wrap" Text="TextBox" Margin="10 30 0 15" Width="125" HorizontalAlignment="Left" Grid.Row="2" Grid.RowSpan="1"/>
+        <Label Content="Dk – Диаметр головки (12 – 15 мм), должен быть больше M + 2 мм:" Margin="5,5,5,5" Grid.Row="3" Grid.RowSpan="1" Grid.ColumnSpan="1"/>
+        <TextBox TextWrapping="Wrap" Text="TextBox" Margin="10 30 0 15" Width="125" HorizontalAlignment="Left" Grid.Row="3" Grid.RowSpan="1"/>
+        <Label Content="D – Диаметр основания стержня (5-6 мм):" Margin="5,5,5,5" Grid.Row="4" Grid.RowSpan="1" Grid.ColumnSpan="1"/>
+        <TextBox TextWrapping="Wrap" Text="TextBox" Margin="10 30 0 15" Width="125" HorizontalAlignment="Left" Grid.Row="4" Grid.RowSpan="1"/>
+        <Label Content="T – Длина отступа (2 – 3 мм):" Margin="5,5,5,5" Grid.Row="5" Grid.RowSpan="1" Grid.ColumnSpan="1"/>
+        <TextBox TextWrapping="Wrap" Text="TextBox" Margin="10 30 0 15" Width="125" HorizontalAlignment="Left" Grid.Row="5" Grid.RowSpan="1"/>
+        <Image Source="/VINT.png" Grid.Column="1" Height="100" Grid.RowSpan="5"   x:Name="mainImage" RenderTransformOrigin="0.5,0.5" Margin="20,12,20,12" Grid.ColumnSpan="2" Grid.Row="1">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2.5" ScaleY="2.5"/>
+                    <RotateTransform Angle="90"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Button  Grid.Column="0" Grid.RowSpan="1"  Grid.ColumnSpan="2" Grid.Row="6" Width="165" Height="40" FontSize="20">Построить</Button>
+       
+    </Grid>
+</Window>
