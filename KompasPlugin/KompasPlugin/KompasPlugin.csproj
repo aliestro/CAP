@@ -9,12 +9,14 @@
 
   <ItemGroup>
     <None Remove="images\ScrewIcon.png" />
+    <None Remove="images\VINT.jpg" />
     <None Remove="images\VINT.png" />
     <None Remove="VINT.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="images\ScrewIcon.png" />
+    <Resource Include="images\VINT.jpg" />
     <Resource Include="images\VINT.png" />
   </ItemGroup>
 
